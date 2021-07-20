@@ -188,6 +188,23 @@
                     "configurations": {
                         "production": {}
                     }
+                },
+                "app-shell": {
+                    "builder": "@angular-devkit/build-angular:app-shell",
+                    "options": {
+                        "route": "shell"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "artisans:build:production",
+                            "serverTarget": "artisans:server:production"
+                        },
+                        "development": {
+                            "browserTarget": "artisans:build:development",
+                            "serverTarget": "artisans:server:development"
+                        }
+                    },
+                    "defaultConfiguration": "production"
                 }
             }
         }

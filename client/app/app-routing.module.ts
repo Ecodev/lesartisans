@@ -4,6 +4,7 @@ import {ViewerResolver} from './admin/users/services/viewer.resolver';
 import {FrontOfficeComponent} from './front-office/front-office.component';
 
 export const routes: Routes = [
+    {path: 'shell', component: FrontOfficeComponent},
     {
         path: 'admin',
         loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
@@ -17,7 +18,6 @@ export const routes: Routes = [
     {
         path: '',
         component: FrontOfficeComponent,
-        resolve: {viewer: ViewerResolver},
         loadChildren: () => import('./front-office/front-office.module').then(m => m.FrontOfficeModule),
     },
 ];

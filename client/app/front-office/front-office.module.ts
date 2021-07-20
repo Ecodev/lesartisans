@@ -99,5 +99,6 @@ import {SessionFacilitatorPrivateComponent} from './components/session-facilitat
         EcoFabSpeedDialModule,
         ShopModule,
     ],
+    exports: [FrontOfficeComponent],
 })
 export class FrontOfficeModule {}

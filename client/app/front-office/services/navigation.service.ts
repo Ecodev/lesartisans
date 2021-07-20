@@ -87,7 +87,8 @@ export class NavigationService {
         const contentContainer = this.document.querySelector('.mat-sidenav-content');
         if (contentContainer) {
             const top = fragment ? this.document.getElementById(fragment)?.offsetTop || 0 : 0;
-            contentContainer.scroll({top: top, behavior: top ? 'smooth' : undefined});
+            // TODO test if method exist when SSR mode
+            // contentContainer.scroll({top: top, behavior: top ? 'smooth' : undefined});
         }
     }
 }
